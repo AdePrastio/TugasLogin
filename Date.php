@@ -14,4 +14,10 @@
 			session_start();
 			$_SESSION['email'] = $email;
 			header("location: welcome.php");
-		} else { ?>
+		} else {
+		echo "Email atau Password tidak sesuai.<br> click disini untuk <a href='login.php'> mencoba lagi</a>";
+		}
+	} else {
+		header("location: login.php");
+	} 
+	?>
