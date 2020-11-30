@@ -11,4 +11,7 @@
 				 setcookie('email', $email, time()+60*60*7);
 				 setcookie('pass', $pass, time()+60*60*7);
 			}
-			 ?>
+			session_start();
+			$_SESSION['email'] = $email;
+			header("location: welcome.php");
+		} else { ?>
